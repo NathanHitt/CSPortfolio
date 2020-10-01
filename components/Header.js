@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
