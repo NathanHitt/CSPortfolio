@@ -1,65 +1,68 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout from '../components/Layout'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
+import Carousel from 'react-bootstrap/Carousel'
 
-export default function Home() {
+const Index = ({ posts, title, description, ...props }) => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+    <Layout pageTitle={title}>
+      <Jumbotron fluid>
+      <Container>
+        <h1>Interested in my skills?</h1>
+        <p>
+          This is a website dedicated to showing off what I have learned.
         </p>
+      </Container>
+    </Jumbotron>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+    <Carousel style={{maxHeight: "80rem", maxWidth: "80rem", marginLeft: "auto", marginRight: "auto"}}>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+  <Carousel.Item>
+    <a href="https://hopeful-heisenberg-eb6cbd.netlify.app/">
+    <img
+      className="d-block w-100"
+      src="https://analyticsindiamag.com/wp-content/uploads/2020/05/aim_snake.gif"
+      alt="Third slide"
+    />
+    </a>
+    <Carousel.Caption>
+      <h3>Snake in React</h3>
+      <p>Credit to ChigaBiga on Youtube</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <a href="https://pensive-montalcini-2e2b74.netlify.app/">
+    <img
+      className="d-block w-100"
+      src="https://i.ytimg.com/vi/HWCFJP6C4bk/maxresdefault.jpg"
+      alt="Third slide"
+    />
+    </a>
+    <Carousel.Caption>
+      <h3>Javascript Quiz Game</h3>
+      <p>Built in pure javascript. Credit to WebDevSimplified</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <a href="https://keen-ride-27280c.netlify.app/">
+    <img
+      className="d-block w-100"
+      src="https://www.interhacktives.com/wp-content/uploads/2014/04/codepen-1024x576.png"
+      alt="Third slide"
+    />
+    </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+    <Carousel.Caption style={{display: "inline"}}>
+      <h3 style={{backgroundColor: "grey"}}>Codepen Clone</h3>
+      <p style={{backgroundColor: "grey"}}>Built in React. Credit to WebDevSimplified</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+<br/>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    </Layout>
   )
 }
+
+export default Index
+
