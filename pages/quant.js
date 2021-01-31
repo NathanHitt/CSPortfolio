@@ -217,7 +217,7 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 <p>Quantum circuits consist of three components:</p>
 <ul>
 <li>The initialization and reset stage</li>
-<li>he quantum gate stage</li>
+<li>The quantum gate stage</li>
 <li>The measurement stage</li>
 <li>The classical interpretation stage</li>
 </ul>
