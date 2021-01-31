@@ -5,13 +5,8 @@ import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/Layout'  
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
-    let whoo
     if (!frontmatter) return <div></div>
-    if (frontmatter.title == 'Introduction to Quantum Computing') {
-        whoo = styles.error
-    } else {
-        whoo = styles.tabloid
-    }
+
 
     return (
         <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
@@ -25,7 +20,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
                 <h1>{frontmatter.title}</h1>
                 <p>By {frontmatter.author}</p>
                 <div>
-                    <ReactMarkdown source={markdownBody} className={whoo}/>
+                    <ReactMarkdown source={markdownBody} />
                 </div>
             </article>
         </Layout>
