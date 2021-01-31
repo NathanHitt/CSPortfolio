@@ -65,7 +65,7 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 <p>This is our first truly quantum gate. This gate allows us to move away from the poles of the Bloch sphere, and into the rest of the 2d vector space. Operating the Hadamard gate upon the 0 or 1 state pushes the vector into a superposition of the 0 and 1 state. I will explain some of the quantum mechanics later but in quantum computing superposition is mathematically just a linear combination.</p>
 
 
-<p>We can see =now multiply the H matrix by the 0 state to see the rotation it performs on the 0 vector.</p>
+<p>We can now multiply the H matrix by the 0 state to see the rotation it performs on the 0 vector.</p>
 
 <img className={quantum.image} src="https://i.ibb.co/r43P3jX/matr.png"></img> <br></br> <br></br>
 
@@ -228,7 +228,79 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 <br></br><br></br>
 <p>Quantum computing employs all of these components to build full quantum circuits that can solve algorithms in a fraction of the time that classical computers do.</p>
 
+<h2>Implementation:</h2> 
+<p>There are a variety of different mediums through which one executes code for a quantum computer. We will be using IBM’s Quantum experience with the Qisket python library in this implementation. IBM Quantum Experience allows you to use Jupyter notebooks to create your circuits, and then either simulate the quantum circuits or send your code off to one of IBM’s physical quantum computers.</p>
+
+<p>To start off, let’s build an Adder Circuit. We can create a new Jupyter notebook to run our code at <a href="https://quantum-computing.ibm.com/jupyter">quantum-computing.ibm.com/jupyter</a>.</p>
+
+<p>In the first cell, we will need to import the entire Qisket library.</p>
+<img src="https://i.ibb.co/MfV65Ty/inline1.png"></img>
+
+<p>Firstly, we will create an object named qc_ha using the QuantumCircuit class with 4 qubits in the circuit, and 2 output bits.</p>
+
+<code>Qc = QuantumCircuit(4,2)</code>
+
+<p>If we want to initalize both qubits to the one state, we can apply an x gate to the 0th and 1st quantum bits. Use x gates to get whatever input bit you desire.</p>
+
+<code>qc_ha.x(0)</code>
+<code>qc_ha.x(1)</code>
+
+<p>Then we will construct a barrier for visual purposes</p>
+<code>qc_ha.barrier()</code>
+
+<p>We will then create 2 CNOT gates</p>
+<code>qc_ha.cx(0,2) ← spans from 0th qubit to 2nd qubit.</code>
+<code>qc_ha.cx(1,2) ← spans from 1th qubit to 2nd qubit.</code>
+
+<p>We will use an extend controlled not gate to measure the output of both input qubits.</p>
+<code>qc_ha.ccx(0,1,3)</code>
+
+<p>We will then extract the outputs.</p>
+<code>qc_ha.measure(2,0)</code>
+<code>q_ha.measure(3,1)</code>
+
+<p>We can draw the circuit using .draw()</p>
+<code>qc_ha.draw()</code>
+
+<p>Altogether this looks like:</p>
+<img src="https://i.ibb.co/VqgR9R7/inline2.png"></img>
+
+
+<p>So what does this do?</p>
+<p>This is a classical circuit that simply adds two bits together and expresses the value of this operation as two bits. This is one of the base circuits of computing and is how all computers perform addition! (in parallel of course).</p>
+
+<p>We can input the 0 state for q0 and the 0 state for q1. All three CNOT gates then do not activate because the control qubits are not in the 1 state.  We then measure the output on the last two qubits as 00.</p>
+
+<p>If we initialize the input states as 1 and 1, something interesting happens. The q0 qubit activates the controlled not gate, flipping the target qubit (q2) from a 0 to a one. The q1 qubit also activates the q2 qubit, flipping it back to a 0. The extended CNOT gate (known as a Toffoli) receives the q0 and q1 qubit, which suffices as control qubits and flip the state of the q4 qubit. Since we measure from q2 to q3, our output state is 10, or 2 in binary. We did it! We carried the one and added successfully. </p>
+
+<p>It is left as an exercise to the reader to calculate the behavior of inputting a 01 or 10 state, but the output is as one would assume 1 + 0 is. </p>
+
+<p>We can simulate and then plot the results of any operation within Qisket using the plot_historgram() function</p>
+
+<code>counts = execute(qc_ha,Aer.get_backend('qasm_simulator')).result().get_counts()</code>
+<code>plot_histogram(counts)</code>
+
+<img src="https://i.ibb.co/M5VmcP2/inline3.png"></img>
+<p>You can see from this that you have a 100% chance of being in the state that you have added, as the circuit is entirely classical. Now we will implement the Bell State in Qisket, and actually run it on a real quantum computer.</p>
+
+
+<p>Now we can work on implementing our very first truly quantum circuit. We will implement the Bell State as a simple demonstration of truly quantum circuits, and use the IBM cloud computing environment to send the job to a real quantum computer for processing and analyze the results.</p>
+
+<p>The implemenation of the Bell State is quite easy, as it is only two circuits. It follows the same initializaion, gate aplication, and measurement paradigm. </p>
+<img src="https://i.ibb.co/kDh0d1W/bellstate2.png"></img>
+<p>In the circuit composer, we can view the Bloch Sphere representation of the statevectors' probabilities upon measurement. We can also see these probabilities on a historgram.</p>
+<img src="https://i.ibb.co/L0MctKM/inline5.png"></img>
+<p>Under the jobs tab in the lefthand corner of IBM Quantum Expereince, we can also execute our circuit on a real IBM Quantum Computer.</p>
+<img src="https://i.ibb.co/zWd6zHs/job.png"></img>
+<p>This will then return the result of our code, with all the randomness of a real quantum computer.</p>
+<img src="https://i.ibb.co/m9RvNN6/result.png"></img>
+<p>We are done! You just coded and executed a quantum program on a real quantum computer!</p>
 <p>Thanks for reading all the way through. The next article will be a walkthrough and explanation of the Deutsch-Jozsa Algorithm.</p>
+<p>Links to my jupyter notebooks:</p>
+<ul>
+    <li><a href="http://s000.tinyupload.com/?file_id=86950391184987115939">Adder Circuit</a></li>
+    <li><a href="http://s000.tinyupload.com/?file_id=93140539784963575694">Bell State</a></li>
+</ul>
 <img className={quantum.image} src="https://i.ibb.co/vLHnxBW/algorithm2.png"></img>
 </div>
 
