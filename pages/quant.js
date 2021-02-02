@@ -161,7 +161,7 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 
 <p>The q0 qubit is put into the superposition of the 0 and 1 state, while The q1 qubit is initially unaffected, due to the placement of the H gate.</p>
 
-<p>Since the statevector of the qubits is as demonstrated above (with the one-state flipped as |10>) The CNOT gate is activatable due to the control qubit being set. This means that the control qubit inverses the state of the target qubit, represented as below:</p>
+<p>Since the statevector of the qubits is as demonstrated above (with the one-state flipped as |10{'>'}) The CNOT gate is activatable due to the control qubit being set. This means that the control qubit inverses the state of the target qubit, represented as below:</p>
 
 <p>(00{'>'} + |10{'>'})/√2 ---{'>'}  (00{'>'} + |11{'>'})/√2</p>
 
@@ -198,10 +198,10 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 
 <p>If you perform the matrix operations, you get these outputs: </p>
 
-<p>00 + 10 --> 00
-<br></br>11 + 01 --> 01
-<br></br>00 - 10 --> 10
-<br></br>11 - 10 --> -11</p>
+<p>00 + 10 --{'>'} 00
+<br></br>11 + 01 --{'>'} 01
+<br></br>00 - 10 --{'>'} 10
+<br></br>11 - 10 --{'>'} -11</p>
 
 <p>** The negative on the -11 is unimportant, as it is a global phase and is therefore unobservable. When the probability calculation is performed the negative disappears.</p>
 

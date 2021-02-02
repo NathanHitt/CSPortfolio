@@ -12,16 +12,16 @@ const About = ({ title, description, ...props }) => {
           <Container>
             <h1>About me</h1>
             <p>
-              I am a student at Jones College Prep interested in Computer Science. I built this website as a way to demonstrate some of my skills.
+              My name is Nathan Hittedorf and I am a senior at Jones College Prep. I built this website to demonstrate my skills in various areas of computer science. I have background in ReactJs, Javascript, HTML, CSS, Python, Java, Linux, and much more. I intend to major in computer science and use the major to become a Cyber Security Operations Manager in the United States Air Force. For inquiries you may email me <a href="nathanmhitt@gmail.com">here</a>.
             </p>
           </Container>
         </Jumbotron>
         <div style={{display: "flex", justifyContent: "center"}}>
         <Card style={{maxHeight: "40%", maxWidth: "40%"}}>
-        <Card.Img variant="top" src="https://media-exp1.licdn.com/dms/image/C4D03AQEZhfYeKz8G5A/profile-displayphoto-shrink_200_200/0?e=1602115200&v=beta&t=GRLfKY7KufIcF-RAPdrO0bqqStwh3bX6pCXNgqdH-IU" />
+        
         <Card.Body>
           <Card.Text>
-            An old picture of me.
+            My full resume is linked <a href="https://docs.google.com/document/d/1VSRbctZklEDT4GqD_2fjLKAzUT7lCEla93ANa148ay0/edit?usp=sharing">here.</a>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -29,13 +29,13 @@ const About = ({ title, description, ...props }) => {
       <Card style={{maxHeight: "40%", maxWidth: "40%"}}>
         <Card.Body>
           <Card.Text>
-            Rock climbing is something I am interested in.
+            A Picture of Me:
           </Card.Text>
         </Card.Body>
-        <Card.Img variant="bottom" src="https://www.outsideonline.com/sites/default/files/styles/img_600x600/public/2019/11/22/rock-climbing-palestine-main_s.jpg?itok=BCE0xt-8" />
+        <Card.Img variant="bottom" src="https://i.ibb.co/BGHhh40/IMG-0688.jpg" />
       </Card>
       </div>
-
+      <br></br>
       </Layout>
     </>
   )

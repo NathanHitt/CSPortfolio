@@ -1,5 +1,5 @@
 ---
-title: 'What are my skills?!'
+title: 'My Skills'
 author: 'Nathan Hittesdorf'
 ---
 
