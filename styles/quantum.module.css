@@ -6,3 +6,8 @@
   padding-right: 1rem;
   
 }
+
+.image {
+  object-fit: contain;
+  max-width: 90vw;
+}

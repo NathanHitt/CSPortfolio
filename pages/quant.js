@@ -234,7 +234,7 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 <p>To start off, let’s build an Adder Circuit. We can create a new Jupyter notebook to run our code at <a href="https://quantum-computing.ibm.com/jupyter">quantum-computing.ibm.com/jupyter</a>.</p>
 
 <p>In the first cell, we will need to import the entire Qisket library.</p>
-<img src="https://i.ibb.co/MfV65Ty/inline1.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/MfV65Ty/inline1.png"></img>
 
 <p>Firstly, we will create an object named qc_ha using the QuantumCircuit class with 4 qubits in the circuit, and 2 output bits.</p>
 
@@ -263,7 +263,7 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 <code>qc_ha.draw()</code>
 
 <p>Altogether this looks like:</p>
-<img src="https://i.ibb.co/VqgR9R7/inline2.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/VqgR9R7/inline2.png"></img>
 
 
 <p>So what does this do?</p>
@@ -280,20 +280,20 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 <code>counts = execute(qc_ha,Aer.get_backend('qasm_simulator')).result().get_counts()</code>
 <code>plot_histogram(counts)</code>
 
-<img src="https://i.ibb.co/M5VmcP2/inline3.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/M5VmcP2/inline3.png"></img>
 <p>You can see from this that you have a 100% chance of being in the state that you have added, as the circuit is entirely classical. Now we will implement the Bell State in Qisket, and actually run it on a real quantum computer.</p>
 
 
 <p>Now we can work on implementing our very first truly quantum circuit. We will implement the Bell State as a simple demonstration of truly quantum circuits, and use the IBM cloud computing environment to send the job to a real quantum computer for processing and analyze the results.</p>
 
 <p>The implemenation of the Bell State is quite easy, as it is only two circuits. It follows the same initializaion, gate aplication, and measurement paradigm. </p>
-<img src="https://i.ibb.co/kDh0d1W/bellstate2.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/kDh0d1W/bellstate2.png"></img>
 <p>In the circuit composer, we can view the Bloch Sphere representation of the statevectors' probabilities upon measurement. We can also see these probabilities on a historgram.</p>
-<img src="https://i.ibb.co/L0MctKM/inline5.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/L0MctKM/inline5.png"></img>
 <p>Under the jobs tab in the lefthand corner of IBM Quantum Expereince, we can also execute our circuit on a real IBM Quantum Computer.</p>
-<img src="https://i.ibb.co/zWd6zHs/job.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/zWd6zHs/job.png"></img>
 <p>This will then return the result of our code, with all the randomness of a real quantum computer.</p>
-<img src="https://i.ibb.co/m9RvNN6/result.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/m9RvNN6/result.png"></img>
 <p>We are done! You just coded and executed a quantum program on a real quantum computer!</p>
 <p>Thanks for reading all the way through. The next article will be a walkthrough and explanation of the Deutsch-Jozsa Algorithm.</p>
 <p>Links to my jupyter notebooks:</p>

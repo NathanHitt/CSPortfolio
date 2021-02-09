@@ -12,7 +12,7 @@ const Blog = ({ posts, title, description, ...props }) => {
     <Container>
       <h1>Fully Functional Markdown Blog</h1>
       <p>
-        This blogging application is fully functional and easily integrated with a headless CMS such as Netlify. Built using a tutorial by Netilfy using NextJS.
+        This blogging application is fully functional and easily integrated with a headless CMS such as Netlify. Built using a tutorial by Netlify using NextJS.
       </p>
     </Container>
   </Jumbotron>

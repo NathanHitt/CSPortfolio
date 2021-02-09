@@ -12,7 +12,7 @@ const About = ({ title, description, ...props }) => {
           <Container>
             <h1>About me</h1>
             <p>
-              My name is Nathan Hittedorf and I am a senior at Jones College Prep. I built this website to demonstrate my skills in various areas of computer science. I have background in ReactJs, Javascript, HTML, CSS, Python, Java, Linux, and much more. I intend to major in computer science and use the major to become a Cyber Security Operations Manager in the United States Air Force. For inquiries you may email me <a href="nathanmhitt@gmail.com">here</a>.
+              My name is Nathan Hittedorf and I am a senior at Jones College Prep. I built this website to demonstrate my skills in various areas of computer science. I have background in ReactJs, Javascript, HTML, CSS, Python, Java, Linux, and much more. I intend to major in computer science and use the major to become a Cyber Security Operations Manager in the United States Air Force. For inquiries you may email me at nathanmhitt@gmail.com.
             </p>
           </Container>
         </Jumbotron>
