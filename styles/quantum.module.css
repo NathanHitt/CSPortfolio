@@ -1,5 +1,5 @@
 .par {
-  max-width: 1050px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -8,6 +8,5 @@
 }
 
 .image {
-  object-fit: contain;
   max-width: 90vw;
 }
