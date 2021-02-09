@@ -134,7 +134,7 @@ Therefore this equation states that any rotation around the Bloch sphere is repr
 
 <p>We can describe the collective state of two qubits by taking the tensor product of both qubits</p>
 
-<img src="https://i.ibb.co/PGgKHn6/tensor.png"></img>
+<img className={quantum.image} src="https://i.ibb.co/PGgKHn6/tensor.png"></img>
 
 <p>This is where our next gate, the CNOT gate, comes in. </p>
 
