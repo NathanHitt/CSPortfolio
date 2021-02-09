@@ -4,7 +4,7 @@ import Header from './Header'
 
 export default function Layout({ children, pageTitle, ...props}) {
     return (
-        <div style={{position: "relative", minHeight: "100vh", minWidth: "90vw"}}>
+        <div style={{position: "relative", minHeight: "100vh", overflowX: 'hidden'}}>
             <div style={{paddingBottom: "4rem"}}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
