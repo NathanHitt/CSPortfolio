@@ -23,7 +23,7 @@ const Quant = ({ title, description, ...props }) => {
         I will provide some useful links to understand these concepts below.</p>
 
 <p><a href="https://www.youtube.com/watch?v=z8c4WIjcCRM&ab_channel=AndrewDotson">Basic Dirac Notation for Intellectuals</a></p>
-<p><a href="https://www.khanacademy.org/math/linear-algebra">Linear Algebra Course:</a></p>
+<p><a href="https://www.khanacademy.org/math/linear-algebra">Linear Algebra Course</a></p>
 <br></br>
 <h2>The Bloch Sphere</h2>
 <p>Quantum computing provides a distinct advantage over classical computing because of the dimensions in which information can be stored and manipulated. In classical computing the fundamental building blocks of information, the bit, are binary. Either 1 or 0. In quantum computing, this information model is expanded exponentially as we instead represent each bit (known as a qubit) as a vector in the two-dimensional complex plane. The vector can stretch in any direction between a maximum value of 0 on one axis, and a maximum value of 1 on the other axis. The complex plane then functions as a rotational medium through which the vector can be transposed for more computationally efficient operations. This is represented visually as the Bloch sphere:</p>
