@@ -23,7 +23,6 @@ const Quant = ({ title, description, ...props }) => {
         I will provide some useful links to understand these concepts below.</p>
 
 <p><a href="https://www.youtube.com/watch?v=z8c4WIjcCRM&ab_channel=AndrewDotson">Basic Dirac Notation for Intellectuals</a></p>
-<br></br>
 <p><a href="https://www.khanacademy.org/math/linear-algebra">Linear Algebra Course:</a></p>
 <br></br>
 <h2>The Bloch Sphere</h2>
